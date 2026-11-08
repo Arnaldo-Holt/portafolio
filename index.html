@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#05080F">
+  <meta name="description" content="Portafolio de Arnaldo Holt, estudiante de Ciencias Informáticas. Desafíos resueltos en el menor tiempo posible y con calidad por encima de lo esperado.">
+  <title>Arnaldo Holt | Ciencias Informáticas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="content.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="Arnaldo Holt, ir al inicio"><span class="brand-mark">AH</span><span>Arnaldo Holt</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="nav-links"></ul>
+      <a class="nav-cta" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-grid container">
+        <div class="hero-copy reveal">
+          <p class="kicker"><span class="live-dot"></span><span data-content="hero.kicker"></span></p>
+          <p class="greeting" data-content="hero.greeting"></p>
+          <h1 id="hero-title"><span data-content="hero.headlineA"></span> <em data-content="hero.headlineB"></em></h1>
+          <p class="hero-description" data-content="hero.intro"></p>
+          <div class="hero-actions"><a class="button button-primary" href="#proyectos">Ver proyectos <span aria-hidden="true">→</span></a><a class="button button-ghost" href="#contacto">Contactarme <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-facts" id="hero-facts" aria-label="Datos destacados"></div>
+        </div>
+        <div class="hero-art reveal" aria-label="Retrato de Arnaldo Holt sobre un cronómetro">
+          <svg class="dial" viewBox="0 0 440 440" aria-hidden="true">
+            <defs>
+              <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F3DDA2"/><stop offset="1" stop-color="#B98E3F"/></linearGradient>
+            </defs>
+            <circle class="dial-ticks" cx="220" cy="220" r="204"/>
+            <circle class="dial-ring" cx="220" cy="220" r="178"/>
+            <circle class="dial-ring dial-ring-inner" cx="220" cy="220" r="140"/>
+            <g class="dial-sweep">
+              <circle class="dial-arc" cx="220" cy="220" r="178"/>
+              <circle class="dial-head" cx="220" cy="398" r="7"/>
+            </g>
+          </svg>
+          <div class="chip chip-time"><span class="chip-label">PRIORIDAD 01</span><b>Tiempo</b></div>
+          <div class="chip chip-quality"><span class="chip-label">PRIORIDAD 02</span><b>Calidad</b></div>
+          <div class="chip chip-innovation"><span class="chip-label">PRIORIDAD 03</span><b>Innovación</b></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee-track"></div></div>
+
+    <section class="section section-dark" id="lema" aria-labelledby="lema-title">
+      <div class="container lema-layout">
+        <div class="reveal">
+          <p class="eyebrow"><span>01</span> <span data-content="lema.kicker"></span></p>
+          <h2 id="lema-title" class="display" data-content="lema.title"></h2>
+          <p class="section-intro" data-content="lema.intro"></p>
+        </div>
+        <div class="priorities" id="priorities"></div>
+      </div>
+    </section>
+
+    <section class="section section-ivory" id="perfil" aria-labelledby="perfil-title">
+      <div class="container">
+        <div class="profile-layout">
+          <div class="reveal"><p class="eyebrow eyebrow-ink"><span>02</span> PERFIL</p><h2 id="perfil-title" class="display">Tecnología al servicio de las <em>personas y organizaciones.</em></h2></div>
+          <div class="profile-content reveal"><p data-content="profile.summary"></p><p data-content="profile.focus"></p><div class="skill-chips" id="skill-chips" aria-label="Áreas de conocimiento"></div></div>
+        </div>
+        <div class="value-grid" id="value-cards"></div>
+      </div>
+    </section>
+
+    <section class="section section-deep" id="metodo" aria-labelledby="metodo-title">
+      <div class="container">
+        <div class="section-heading reveal"><p class="eyebrow"><span>03</span> MÉTODO</p><h2 id="metodo-title" class="display" data-content="method.title"></h2><p class="section-intro" data-content="method.intro"></p></div>
+        <div class="steps" id="method-steps"></div>
+      </div>
+    </section>
+
+    <section class="section section-ivory" id="trayectoria" aria-labelledby="trayectoria-title">
+      <div class="container"><div class="section-heading reveal"><p class="eyebrow eyebrow-ink"><span>04</span> TRAYECTORIA</p><h2 id="trayectoria-title" class="display">Formación y <em>experiencia.</em></h2></div><div class="timeline-layout"><div><h3 class="timeline-label">Formación y reconocimientos</h3><div class="timeline" id="education-timeline"></div></div><div><h3 class="timeline-label">Experiencia</h3><div class="timeline" id="experience-timeline"></div></div></div></div>
+    </section>
+
+    <section class="section section-dark" id="proyectos" aria-labelledby="proyectos-title">
+      <div class="container"><div class="section-heading reveal"><p class="eyebrow"><span>05</span> TRABAJO APLICADO</p><h2 id="proyectos-title" class="display">Proyectos y <em>evidencias.</em></h2><p class="section-intro" data-content="projects.intro"></p></div><div class="project-grid" id="project-cards"></div></div>
+    </section>
+
+    <section class="section section-deep contact-section" id="contacto" aria-labelledby="contacto-title">
+      <div class="container contact-panel reveal"><div class="contact-copy"><p class="eyebrow eyebrow-onGold"><span>06</span> PRÓXIMO PASO</p><h2 id="contacto-title" class="display" data-content="contact.title"></h2><p data-content="contact.body"></p></div><div class="contact-action"><img class="contact-portrait" src="assets/arnaldo-holt.png" alt="Retrato de Arnaldo Holt con traje" width="1296" height="1882"><a class="button button-dark" id="email-link" href="#">Escribirme <span aria-hidden="true">↗</span></a><p class="email-display" id="email-display"></p></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="#inicio"><span class="brand-mark">AH</span><span>Arnaldo Holt</span></a><p data-content="footer"></p><a href="#inicio" class="back-top">Volver arriba ↑</a></div></footer>
+</body>
+</html>
